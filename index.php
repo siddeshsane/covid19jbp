@@ -1,6 +1,6 @@
 <html>
 	<head>
-	<link rel="stylesheet" type="text/css" href="css/style3.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<link rel="stylesheet" type="text/css" href="css/covid.css">
 	<script src="scripts/script.js"></script>
 	</head>
@@ -9,7 +9,6 @@
 	 <?php
 	  $state = urlencode($_GET['State']);
       $dict =  urlencode($_GET['District']);
-      
       
       if($state && $dict)
       {
@@ -34,10 +33,7 @@
         curl_setopt($ch, CURLOPT_URL, $url); 
         
         $result=curl_exec($ch);
-        
-        //echo $result;
-        // echo "<br/>";
-        
+
         //curl_close ($ch);
         $idx = strlen($result)-15;
         $ff= substr($result,13,$idx);
@@ -54,7 +50,8 @@
        $st = urldecode($state);
    
 
-	  echo " <div class='navbar2'>       Covid19 [$dict] $st </div>
+	  echo " <div class='navbar2'>      Covid19 [$dict] $st <br/><br/>
+	    <span class='maker'>developed by Siddesh Sane</span></div>
     	<div>
     	<div class='Level'>
 		<div class='level-item is-cherry fadeInUp' style='animation-delay: 1s;'>

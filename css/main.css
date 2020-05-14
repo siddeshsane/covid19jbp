@@ -16,6 +16,12 @@
 	width:100%;
 	background-color:blue;	
 }
+.maker
+{
+    font-size:11px;
+    color:green;
+    text-align:right;
+}
 .navbar2
 {
     flex-direction: row;
