@@ -1,0 +1,29 @@
+.header
+{
+	height:200px;
+	width:100%;
+	background-color:green;	
+}
+.bodyer
+{
+	height:800px;
+	width:100%;
+	background-color:white;	
+}
+.footer
+{
+	height:100px;
+	width:100%;
+	background-color:blue;	
+}
+.navbar2
+{
+    flex-direction: row;
+    height: 60px;
+    width:500px;
+    background-color:#ebf0ec;
+    font-family:"archia";
+    font-size:18px;
+    color:#838584;
+    text-align:center;
+}
