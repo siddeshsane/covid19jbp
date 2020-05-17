@@ -33,3 +33,14 @@
     color:#838584;
     text-align:center;
 }
+.footerbar2
+{
+    flex-direction: row;
+    height: 60px;
+    width:500px;
+    background-color:#edf5ef;
+    font-family:"archia";
+    font-size:18px;
+    color:#838584;
+    text-align:center;
+}
