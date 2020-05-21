@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<title>Covid19Tracker</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="scripts/script6.js"></script>
+<link rel="stylesheet" href="css/mystyle.css">
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/covid.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+html,body,h1,h2,h3,h4,h5 {font-family: sans-serif}
+</style>
+<body class="w3-light-grey" onload="getLocation();">
+
+<!-- Top container -->
+<div class="w3-bar w3-top w3-white w3-large" style="z-index:4">
+  <img src="images/covid19logo.png" width="120px" /><br/>
+  <span id="titleMain" style="color:#fc8403;font-weight:bolder;"> Pune [Maharashtra] </span>
+</div>
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-right:200px;margin-left:200px;margin-top:170px;">
+
+	 <div class="w3-panel" style="margin-right:1px;margin-left:1px;">
+		 <div class='Level'>
+		  <div class='level-item is-cherry fadeInUp' style='animation-delay: 1s;'>
+		  <h5>Confirmed</h5><h4>[+<span id='dconfirmed'></span>]</h4><h1><span id='confirmed'></span></h1></div>
+		  <div class='level-item is-blue fadeInUp' style='animation-delay: 1.1s;'>
+		  <h5 class='heading'>Active</h5><h4>[+<span id='dactive'></span>]</h4><h1 class='title has-text-info'><span id='active'></span></h1></div>
+		  <div class='level-item is-green fadeInUp' style='animation-delay: 1.2s;'>
+		  <h5 class='heading'>Recovered</h5><h4>[+<span id='drecovered'></span>]</h4><h1 class='title has-text-success'><span id='recovered'></span></h1></div>
+		  <div class='level-item is-gray fadeInUp' style='animation-delay: 1.3s;'>
+		  <h5 class='heading'>Death</h5><h4>[+<span id='ddeceased'></span>]</h4><h1 class='title has-text-grey'><span id='deceased'></span></h1></div>
+		  </div>
+	</div>
+
+	<hr>
+	<div class="w3-panel">
+	 <span id="titleTest" style="color:gray;font-weight:bolder;text-align:center;font-size:18px">Testing Summary for Maharashtra</span>
+     <div>
+	<table class='w3-table w3-striped w3-bordered w3-border w3-hoverable w3-white'>
+    <tr style='color:gray;font-size:18px;'><td>Total Tested</td><td>Positive</td><td>Negative</td><td>In Quarntine</td></tr>
+	<tr style='color:green;font-size:17px;'><td><span id='tested'></span></td><td><span id='positive'></span></td><td><span id='negative'></span></td><td><span id='inq'></span></td></tr>
+    </table>
+	</div>
+	</div>
+   	<hr>
+  <div class="w3-panel">
+    <span id="titleDict" style="color:gray;font-weight:bolder;text-align:center;font-size:18px">District wise cases</span>
+   <Div id="xyz"></Div>
+  </div>
+ 
+  </div>
+  <footer class="w3-bar-footer">
+    <h4>Developed by Siddesh Sane</h4> <img src="images/pugmarkslogo.png" />
+    <p style="font-size:13px">Data Source : <a href="https://geoiq.io/covid19.html" target="_blank">GEOIQ</a>, <a href="https://www.Covid19India.org" target="_blank">Covid19India</a> Reference :<a href="https://www.w3schools.com" target="_blank">w3School</a></p>
+  </footer>
+<script>
+// Get the Sidebar
+var mySidebar = document.getElementById("mySidebar");
+
+// Get the DIV with overlay effect
+var overlayBg = document.getElementById("myOverlay");
+
+// Toggle between showing and hiding the sidebar, and add overlay effect
+function w3_open() {
+  if (mySidebar.style.display === 'block') {
+    mySidebar.style.display = 'none';
+    overlayBg.style.display = "none";
+  } else {
+    mySidebar.style.display = 'block';
+    overlayBg.style.display = "block";
+  }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+  mySidebar.style.display = "none";
+  overlayBg.style.display = "none";
+}
+</script>
+</body>
+</html>
