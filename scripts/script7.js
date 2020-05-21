@@ -20,8 +20,7 @@ function getLocation() {
  function callAPI(lat,lon)
  {
      var request = new XMLHttpRequest()
- 
-     request.open('GET', 'https://pugmarks.tech/covid19jbp/webapi/?State='+lat+'&District='+lon+'&Action=All', true)
+     request.open('GET', 'https://pugmarks.tech/Covid19Tracker/webapi/index.php?State='+lat+'&District='+lon+'&Action=All', true)
      request.onload = function() {
        // Begin accessing JSON data here
        var data = JSON.parse(this.response)
@@ -68,7 +67,7 @@ function getLocation() {
  {
      var request = new XMLHttpRequest()
  
-     request.open('GET', 'https://pugmarks.tech/covid19jbp/webapi/?State='+lat+'&District='+lon+'&Action=District', true)
+     request.open('GET', 'https://pugmarks.tech/Covid19Tracker/webapi/index.php?State='+lat+'&District='+lon+'&Action=District', true)
      request.onload = function() {
        // Begin accessing JSON data here
        var data = JSON.parse(this.response)

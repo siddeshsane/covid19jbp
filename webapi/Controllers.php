@@ -27,6 +27,12 @@ class Covid19Controller {
             case 'Location': 
                     $response = $this->getLocationSummaryData();
                 break;
+            case 'All': 
+                    $response = $this->getAllSummaryData();
+                break;
+            case 'District': 
+                    $response = $this->getAllDistrictData();
+                break;
            default:
                 $response = $this->notFoundResponse();
                 break;
@@ -69,6 +75,29 @@ class Covid19Controller {
         $response['body'] = json_encode($result);
         return $response;
     }
+    
+     private function getAllSummaryData()
+    {
+        $allDetails = new AllDetails($this->state, $this->dict);
+        
+        $result = $allDetails->papulate();
+        
+        $response['status_code_header'] = 'HTTP/1.1 200 OK';
+        $response['body'] = json_encode($result);
+        return $response;
+    }
+    
+    private function getAllDistrictData()
+    {
+        $dDetails = new DistrictDetails($this->state, $this->dict);
+        
+        $result = $dDetails->papulate();
+        
+        $response['status_code_header'] = 'HTTP/1.1 200 OK';
+        $response['body'] = json_encode($result);
+        return $response;
+    }
+   
    
     private function notFoundResponse()
     {

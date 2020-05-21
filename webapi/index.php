@@ -1,6 +1,8 @@
 <?php
 
 require "PatientContract.php";
+require "AllContract.php";
+require "DistrictContract.php";
 require "LocationContract.php";
 require "TestContract.php";
 require "Controllers.php";
